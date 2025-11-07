@@ -7,27 +7,81 @@
 
     <!-- CSS External file Link -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS File Link -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
     <!-- Header -->
-     <header>
+     <header class="main-header">
         <!-- Logo -->
-         <div></div>
+         <div class="logo"></div>
 
         <!-- Navigation Menu -->
-         <nav>
-            <a href="menu">Menu</a>
-            <a href="home">Home</a>
-            <a href="our-profile">Our Profile</a>
-            <a href="portfolio">Portfolio</a>
-            <a href="message-us">Message Us</a>
+         <nav class="flex">
+            <a class="border round p-2" href="#home-page">Home</a>
+            <a class="border round p-2" href="#our-profile-page">Our Profile</a>
+            <a class="border round p-2" href="#portfolio-page">Portfolio</a>
+            <a class="border round p-2" href="#message-us-page">Message Us</a>
          </nav>
      </header>
 
+     <hr/>
+
     <!-- Main Content -->
-     <main></main>
+     <main>
+        <!-- Home Page -->
+        <section id="home-page" class="min-h-[500px] text-center">
+            <h2 class="text-xl font-bold" id="welcome-speech">Welcome to Our Website</h2>
+            <p class="mt-2">We are glad to have you here. Explore our services and offerings.</p>
+        </section>
+
+        <!-- Our Profile Page -->
+        <section id="our-profile-page" class="min-h-[500px] text-center">
+            <h2 class="text-xl font-bold">About Generator Solutions</h2>
+            <p class="mt-2">Generator Solutions is a leading provider of innovative solutions for businesses worldwide. Our mission is to empower organizations through cutting-edge technology and exceptional service.</p>
+        </section>
+
+        <!-- Portfolio Page -->
+        <section id="portfolio-page" class="min-h-[500px] text-center">
+            <h2 class="text-xl font-bold">Our Portfolio</h2>
+            <p class="mt-2">Check out some of our recent projects and accomplishments.</p>
+        </section>
+
+        <!-- Message Us Page -->
+        <section id="message-us-page" class="min-h-[500px] max-w-lg mx-auto p-4 ">
+            <header>
+                <h2 class="text-xl font-bold">Message Us</h2>
+            <p class="mt-2">We would love to hear from you! Reach out with any questions or inquiries.</p>
+            </header>
+            
+            
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name:</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" id="name" name="name" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text>-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="email" id="email" name="email" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message:</label>
+                    <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div>
+
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" onclick="welcomeMessage()" type="submit">Send Message</button>    
+                </div>
+            </form>
+        </section>
+
+     </main>
 
     <!-- Footer -->
-     <footer></footer>
+     <footer>
+        <p>&copy; 2024 Generator Solutions. All rights reserved.</p>
+     </footer>
 
      <!-- JS External File Link -->
       <script src="js/script.js"></script>
